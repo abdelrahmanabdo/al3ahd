@@ -1,9 +1,6 @@
 @extends('layouts.layout') 
 @section('content')
 
-
-
-
 <!-- Gallery -->
 <section id="property" class="padding bg_gallery">
     <div class="container">
@@ -66,9 +63,9 @@
                         </div>
                         <div class="toggle_share collapse" id="seventy">
                             <ul>
-                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                                    <li><a href="{{$arml->facebook_link}}" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                    <li><a href="{{$arml->twitter_link}}" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                    <li><a href="{{$arml->gmail_link}}" class="twitter"><i class="icon-google"></i> Gmail</a></li>
                             </ul>
                         </div>
                     </div>
@@ -118,9 +115,9 @@
                         </div>
                         <div class="toggle_share collapse" id="seventy">
                             <ul>
-                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                                <li><a href="{{$a3zb->facebook_link}}" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="{{$a3zb->twitter_link}}" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="{{$a3zb->gmail_link}}" class="twitter"><i class="icon-google"></i> Gmail</a></li>
                             </ul>
                         </div>
                     </div>
@@ -170,9 +167,9 @@
                         </div>
                         <div class="toggle_share collapse" id="seventy">
                             <ul>
-                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                                    <li><a href="{{$misyar->facebook_link}}" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                    <li><a href="{{$misyar->twitter_link}}" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                    <li><a href="{{$misyar->gmail_link}}" class="twitter"><i class="icon-google"></i> Gmail</a></li> 
                             </ul>
                         </div>
                     </div>
