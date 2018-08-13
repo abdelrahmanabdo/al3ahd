@@ -210,7 +210,7 @@
                                         <div class="more-info">
                                             <!-- <div class="pull-right"></div>
                                               <div class="pull-left"></div> -->
-                                            <a href="profile.html">صفحتى الشخصية</a>
+                                            <a href="{{url('/profile/'.$user->id)}}">صفحتى الشخصية</a>
                                         </div>
                                     </div>
                                 </div>

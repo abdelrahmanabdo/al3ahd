@@ -23,11 +23,14 @@ Route::get('/women-mesiar', 'NavigationController@women_mesiar')->name('women-me
 Route::get('/women-multi', 'NavigationController@women_multi')->name('women-multi');
 Route::get('/profile/{id}', 'NavigationController@profile');
 Route::get('/profile-settings/{id}', 'NavigationController@profile_settings');
-
 Route::get('/login', 'NavigationController@login')->name('login');
 Route::get('/new-account', 'NavigationController@new_account')->name('new-account');
 Route::get('/about', 'NavigationController@about')->name('about');
 Route::get('/contact', 'NavigationController@contact')->name('contact');
+Route::get('/faq', 'NavigationController@faq')->name('faq');
+Route::get('/terms', 'NavigationController@terms')->name('terms');
+Route::get('/policy', 'NavigationController@policy')->name('policy');
+Route::get('/qasam', 'NavigationController@qasam')->name('qasam');
 
 /**
  *  End navigation

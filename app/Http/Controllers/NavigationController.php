@@ -60,6 +60,21 @@ class NavigationController extends Controller
         return view('contact');      
     }
 
+    public function terms () {
+        return view('terms-and-conditions');      
+    }
+
+    public function policy () {
+        return view('policy');      
+    }
+
+    public function qasam () {
+        return view('qasam');      
+    }
+
+    public function faq () {
+        return view('faq');      
+    }
     public function about () {
         return view('about');      
     }

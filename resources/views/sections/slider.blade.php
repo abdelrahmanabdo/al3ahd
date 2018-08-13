@@ -18,7 +18,7 @@
                <p>
                    خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور
                </p>
-               <a class="btn-white border_radius" href="#">إقرأ المزيد</a>
+               <a class="btn-white border_radius" href="{{route('about')}}">إقرأ المزيد</a>
            </div>
        </ul>
    </div>

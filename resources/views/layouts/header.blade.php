@@ -172,7 +172,7 @@
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
             <i class="fa fa-bars"></i>
             </button>
-                            <a class="navbar-brand" href="index6.html"><img src="images/logo.png" class="logo" alt=""></a>
+                            <a class="navbar-brand" href="{{route('home')}}" ><img src="images/logo.png" class="logo" alt=""></a>
                         </div>
                         <div class="collapse navbar-collapse" id="navbar-menu">
                             <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">

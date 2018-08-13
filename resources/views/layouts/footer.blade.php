@@ -74,10 +74,10 @@
                 <div class="footer_panel bottom30">
                     <h4 class="bottom30">روابط مهمة</h4>
                     <ul class="footer-links">
-                        <li><a href="terms.html">الشروط والأخكام</a></li>
-                        <li><a href="qasm.html">القسم</a></li>
-                        <li><a href="policy.html">سياسة الموقع</a></li>
-                        <li><a href="faq.html">الاسئلة الأكثر إنتشاراً</a></li>
+                        <li><a href="{{route('terms')}}">الشروط والأخكام</a></li>
+                        <li><a href="{{route('qasam')}}">القسم</a></li>
+                        <li><a href="{{route('policy')}}">سياسة الموقع</a></li>
+                        <li><a href="{{route('faq')}}">الاسئلة الأكثر إنتشاراً</a></li>
                     </ul>
                 </div>
             </div>
