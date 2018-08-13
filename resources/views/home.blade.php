@@ -52,7 +52,7 @@
             3 أطفال
             @elseif($arml->children === 4)
             4 أطفال
-            @elseif($arml->children === 4)
+            @elseif($arml->children === 5)
             5 أطفال
             @endif
               </span>
@@ -104,7 +104,7 @@
             3 أطفال
             @elseif($a3zb->children === 4)
             4 أطفال
-            @elseif($a3zb->children === 4)
+            @elseif($a3zb->children === 5)
             5 أطفال
             @endif
                 </span>
@@ -156,7 +156,7 @@
             3 أطفال
             @elseif($misyar->children === 4)
             4 أطفال
-            @elseif($misyar->children === 4)
+            @elseif($misyar->children === 5)
             5 أطفال
             @endif
             </span>

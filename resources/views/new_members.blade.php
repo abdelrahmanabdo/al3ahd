@@ -196,7 +196,7 @@
                                                 3 أطفال
                                                 @elseif($user->children === 4)
                                                 4 أطفال
-                                                @elseif($user->children === 4)
+                                                @elseif($user->children === 5)
                                                 5 أطفال
                                                 @endif
 

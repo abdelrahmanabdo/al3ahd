@@ -43,11 +43,11 @@ class CreateUsersTable extends Migration
             $table->longText('profile_picture')
                 ->comment("user's profile picture");
             $table->tinyInteger('children');
-            $table->string('facebook_link');
-            $table->string('twitter_link');
-            $table->string('gmail_link');
-            $table->string('instagram_link');
-            $table->string('linkedin_link');
+            $table->string('facebook_link')->nullable();
+            $table->string('twitter_link')->nullable();
+            $table->string('gmail_link')->nullable();
+            $table->string('instagram_link')->nullable();
+            $table->string('linkedin_link')->nullable();
             $table->string('remember_token')->nullable();
             $table->timestamps();
         });

@@ -72,11 +72,11 @@ class RegisterController extends Controller
      */
     protected function create(Request $data)
     {
-        if($request->hasFile('profile_picture')){
+        if($data->hasFile('profile_picture')){
             $originalImage =  $data->file('profile_picture');
-            $coursesPath = 'app/avatars/';
+            $coursesPath = storage_path('app/public/avatars/');
             $img = Image::make($originalImage);
-            $imageURL = $coursesPath.time().'.'.$originalImage->getClientOriginalExtension();
+            $imageURL = time().'.'.$originalImage->getClientOriginalExtension();
             $img->save($imageURL);
         }else{
            $imageURL ='images/img-profile.jpg';

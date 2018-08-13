@@ -296,7 +296,7 @@
           </div>
           <div class="select-group input-group margin-bottom-20">
                 <span class="input-group-addon"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></span>
-            <select name="accept_misyar" class="form-control">
+            <select name="children" class="form-control">
               <option selected="" value="">لديك/لديكي أطفال</option>
               <option value="0">ليس لدي</option>
               <option value="1">1</option>
