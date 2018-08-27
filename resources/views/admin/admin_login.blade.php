@@ -55,7 +55,7 @@
     <form action="{{route('adminLogin')}}" method="post" >
         @csrf
       <div class="form-group has-feedback">
-        <input type="email" name="username" class="form-control" placeholder="البريد الإلكترونى">
+        <input type="text" name="username" class="form-control" placeholder="البريد الإلكترونى">
         <span class="fa fa-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -80,8 +80,8 @@
 
 
 
-    <a href="forget-pass.html">نسيت كلمة المرور</a><br>
-    <a href="register.html" class="text-center">تسجيل عضوية جديدة</a>
+   <!-- <a href="forget-pass.html">نسيت كلمة المرور</a><br>
+    <a href="register.html" class="text-center">تسجيل عضوية جديدة</a> -->
 
   </div>
   <!-- /.login-box-body -->

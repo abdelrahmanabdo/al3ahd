@@ -234,7 +234,7 @@
 </section>
 <!--About Owner ends-->
 
-
+{{--  
 <!--Testinomials-->
 <section id="testinomialBg" class="padding bg_light">
     <div id="agent-2" class="padding_bottom">
@@ -337,6 +337,6 @@
             </div>
         </div>
     </div>
-</section>
+</section>  --}}
 <!--Testinomials ends-->
 @endsection

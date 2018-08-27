@@ -21,44 +21,66 @@
         <!-- widget -->
         @guest
         <div class="widget">
-          <div class="widget-header">
-            <h3>تسجيل الدخول</h3>
-          </div>
-          <div class="widget-body">
-            <form class="widget-login">
-              <div class="form-group">
-                <label for="exampleInputEmail1">البريد الإلكترونى</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="البريد الإلكترونى">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">كلمة المرور</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="كلمة المرور">
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-5">
-                    <div class="checkbox pull-left">
-                      <label>
-                      <input type="checkbox"> تذكرنى
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-xs-7">
-                    <div class="checkbox pull-right">
-                      <a href="fotget-password.html">نسيت كلمة المرور</a>
-                    </div>
-                  </div>
+            <div class="widget-header">
+                <h3>تسجيل الدخول</h3>
+            </div>
+            @if (session('alert'))
+            <div class="row">
+            
+                <div class="alert alert-success col-md-12 ">
+                    {{ session('alert') }}
                 </div>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-default btn-block">تسجيل دخول</button>
-              </div>
-              <div class="new-account-link">ليس لدى حساب. <a href="new-account.html"> إنشاء حساب</a></div>
-            </form>
-          </div>
+            </div>
+            @endif
+            
+            
+            @if ($errors->any())
+            <div class="row">
+            
+                <div class="alert alert-danger col-md-12 ">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+            @endif
+            <div class="widget-body">
+                <form class="widget-login " action="{{route('login')}}" method="POST" >
+                        @csrf
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">البريد الإلكترونى</label>
+                            <input type="text" class="form-control" name="username" id="exampleInputEmail1" placeholder="البريد الإلكترونى">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">كلمة المرور</label>
+                            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="كلمة المرور">
+                        </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox"> تذكرنى
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="checkbox pull-right">
+                                    <a href="fotget-password.html">نسيت كلمة المرور</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default btn-block">تسجيل دخول</button>
+                    </div>
+                    <div class="new-account-link">ليس لدى حساب. <a href="new-account.html"> إنشاء حساب</a></div>
+                </form>
+            </div>
         </div>
-        <!-- //widget -->
-        <!-- widget -->
         @endguest
         @auth
         <div class="widget">

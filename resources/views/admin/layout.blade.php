@@ -177,7 +177,7 @@
         <li class="active"><a href="{{route('dashboard')}}"><i class="fa fa-link"></i> <span>لوحة التحكم</span></a></li>
         {{--  <li><a href="all-msgs.html"><i class="fa fa-link"></i> <span>كل الرسائل</span> <span class="label bg-green pull-right">6</span></a></li>
         <li><a href="all-ntfys.html"><i class="fa fa-link"></i> <span>كل الإشعارات</span> <span class="label label-primary pull-right">8</span></a></li>  --}}
-        <li><a href="member-upgrade.html"><i class="fa fa-link"></i> <span>ترقية العضوية</span></a></li>
+      <!--  <li><a href="member-upgrade.html"><i class="fa fa-link"></i> <span>ترقية العضوية</span></a></li> -->
         <li><a href="{{route('allMembers')}}"><i class="fa fa-link"></i> <span>كل الأعضاء</span></a></li>
         <li><a href="{{route('specialMembers')}}"><i class="fa fa-link"></i> <span>الأعضاء المميزين</span></a></li>
         <li><a href="{{route('blockedMembers')}}"><i class="fa fa-link"></i> <span>الأعضاء المحظوريين</span></a></li>
