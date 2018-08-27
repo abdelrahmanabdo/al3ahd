@@ -91,12 +91,13 @@
     </div>
   </div>
   <div class="col-sm-3 bottom40">
-    <form class="callus bottom40">
+    <form class="callus bottom40" method="POST" action="{{route('sendMail')}}">
+      @csrf
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="الموضوع">
+        <input type="text" class="form-control" name="title" placeholder="الموضوع">
       </div>
       <div class="form-group">
-        <textarea class="form-control" placeholder="الرسالة"></textarea>
+        <textarea class="form-control" name="content" placeholder="الرسالة"></textarea>
       </div>
       <input type="submit" class="btn-blue uppercase border_radius" value="إرسال">
     </form>

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request ;
 use Image;
+use Storage;
 class RegisterController extends Controller
 {
     /*
@@ -77,11 +78,12 @@ class RegisterController extends Controller
             $coursesPath = storage_path('app/public/avatars/');
             $img = Image::make($originalImage);
             $imageURL = time().'.'.$originalImage->getClientOriginalExtension();
+            $img->stream(); // <-- Key point
+            Storage::disk('local')->put('avatars/'.'/'.$imageURL, $img);
             $img->save($imageURL);
         }else{
            $imageURL ='images/img-profile.jpg';
         }
-
         return User::create([
             'username' => $data['username'],
             'email' => $data['email'],

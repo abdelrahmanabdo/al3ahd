@@ -19,7 +19,7 @@
             </div>
         </div>
         <div id="property-gallery" class="cbp listing1">
-            @foreach($armlUsers as $arml)
+            @forelse($armlUsers as $arml)
             <div class="cbp-item latest marride">
                 <div class="property_item user-box">
                     <div class="image">
@@ -71,7 +71,14 @@
                     </div>
                 </div>
             </div>
-            @endforeach @foreach($a3zbUsers as $a3zb)
+
+            @empty 
+   
+               <h3 class="well">لا يوحد نتائج</h3>
+
+            @endforelse 
+            
+            @forelse($a3zbUsers as $a3zb)
             <div class="cbp-item sale marride">
                 <div class="property_item user-box">
                     <div class="image">
@@ -123,7 +130,14 @@
                     </div>
                 </div>
             </div>
-            @endforeach @foreach($misyarUsers as $misyar)
+
+            @empty 
+
+             <h3 class="well">لا يوحد نتائج</h3>
+            
+            @endforelse
+            
+            @forelse($misyarUsers as $misyar)
             <div class="cbp-item rent marride">
                 <div class="property_item user-box">
                     <div class="image">
@@ -175,7 +189,11 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+
+               <h3 class="well">لا يوحد نتائج</h3>
+            
+             @endforelse
         </div>
         <div class="col-sm-12 text-center top20">
             <a href="{{route('new-members')}}" class="btn-dark border_radius uppercase margin40">المزيد من الأعضاء</a>

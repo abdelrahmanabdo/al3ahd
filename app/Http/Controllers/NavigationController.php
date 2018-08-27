@@ -11,9 +11,9 @@ class NavigationController extends Controller
     //
 
     public function home () {
-        $armlUsers = User::where('social_status','ارمل')->limit(9)->get();
-        $a3zbUsers = User::where('social_status','اعزب')->limit(9)->get();
-        $misyarUsers = User::where('accept_misyar',1)->where('gender','انثى')->limit(9)->get();
+        $armlUsers = User::where('social_status','ارمل')->where('isAdmin',0)->limit(9)->get();
+        $a3zbUsers = User::where('social_status','اعزب')->where('isAdmin',0)->limit(9)->get();
+        $misyarUsers = User::where('accept_misyar',1)->where('gender','انثى')->where('isAdmin',0)->limit(9)->get();
 
         return view('home' , [
             'armlUsers' => $armlUsers ,
@@ -23,21 +23,22 @@ class NavigationController extends Controller
     }
 
     public function new_members () {
-        $newUsers = User::orderBy('id', 'desc')->limit(8)->get();
+        $newUsers = User::orderBy('id', 'desc')->limit(8)->where('isAdmin',0)->get();
         return view('new_members' , ['users' => $newUsers]);
     }
 
     public function special_members () {
-        return view('special_members');
+        $specialUsers = User::paginate(10)->where('membership_type','special')->where('isAdmin',0);
+        return view('special_members',['specialMembers'=>$specialUsers]);
     }
 
     public function women_mesiar () {
-        $mesiarUsers = User::where('accept_misyar','=',1)->where('gender','انثى')->paginate(10);
+        $mesiarUsers = User::where('accept_misyar','=',1)->where('gender','انثى')->where('isAdmin',0)->paginate(10);
         return view('women_mesiar' , ['mesiarUsers' => $mesiarUsers]);    
     }
 
     public function women_multi () {
-        $multiUsers = User::where('accept_polygamy','=','1')->where('gender','انثى')->paginate(10);
+        $multiUsers = User::where('accept_polygamy','=','1')->where('isAdmin',0)->where('gender','انثى')->paginate(10);
         return view('women_multi' ,['multiUsers' => $multiUsers]);    
     }
 
