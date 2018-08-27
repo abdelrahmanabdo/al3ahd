@@ -26,6 +26,7 @@ Route::get('/profile/{id}', 'NavigationController@profile');
 Route::get('/profile-settings/{id}', 'NavigationController@profile_settings');
 Route::post('/profile-settings/updateSocial/{id}','ProfileController@update_socail_links')->name('updateProfileSocial');
 Route::post('/profile-settings/update/{id}','ProfileController@update_profile_data')->name('updateProfileData');
+Route::post('/profile-settings/update/avatar/{id}','ProfileController@update_profile_avatar')->name('updateUserAvatar');
 
 Route::get('/login', 'NavigationController@login')->name('login');
 Route::get('/new-account', 'NavigationController@new_account')->name('new-account');

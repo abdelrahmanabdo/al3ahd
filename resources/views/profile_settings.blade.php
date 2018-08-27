@@ -18,15 +18,19 @@
   <div class="container-3">
     <div class="row">
       <div class="col-md-4 col-sm-6 col-xs-12">
-          @if(session('alert'))
+          @if(session('data_alert') || session('avatar_alert') )
           <div class="alert alert-success col-md-10 col-md-offset-1">
-              {{ session('alert') }}
+              {{ session('data_alert') ? session('data_alert') : session('avatar_alert')  }}
           </div>
           @endif
         <h2 class="text-uppercase bottom30">حسابى</h2>
         <div class="agent-p-img">
           <img src="{{$user->profile_picture ? asset('storage/avatars/'.$user->profile_picture) : 'images/img-profile.jpg'}}" class="img-responsive" alt="image" />
-          <a href="#" class="top10 bottom20">تحديث الصورة الشخصية</a>
+          <form method="POST" action="{{route('updateUserAvatar', $user->id)}}"  enctype="multipart/form-data">
+            @csrf
+              <input type="file" name="avatar"  class="top10 bottom20"/>  
+              <button type="submit" class="top10 bottom20">تحديث الصورة الشخصية</button>
+          </form>
           <p class="">بحد ادنى 215بيكسيل X 215بيكسيل<span>*</span></p>
         </div>
       </div>
@@ -309,9 +313,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5 col-sm-6 col-xs-12 profile-form margin40">
-          @if(session('alert'))
+          @if(session('social_alert'))
           <div class="alert alert-success col-md-10 col-md-offset-1">
-              {{ session('alert') }}
+              {{ session('social_alert') }}
           </div>
           @endif
         <h3 class="bottom30 margin40">شبكة التواصل الإجتماعى</h3>

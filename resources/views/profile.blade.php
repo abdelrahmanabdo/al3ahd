@@ -90,6 +90,7 @@
          </p>
     </div>
   </div>
+  @if(auth()->user()->id !== $user->id)
   <div class="col-sm-3 bottom40">
     <form class="callus bottom40" method="POST" action="{{route('sendMail')}}">
       @csrf
@@ -107,6 +108,7 @@
       <input type="submit" class="btn btn-danger pull-right" value="حظر">
     </p>
   </div>
+  @endif
 </div>
 </div>
 </section>
