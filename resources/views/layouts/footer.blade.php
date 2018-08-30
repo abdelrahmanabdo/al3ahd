@@ -1,72 +1,37 @@
 
 <!--Footer-->
 <footer class="padding_top">
+    @php 
+    use App\GeneralSettings;
+    $settings = GeneralSettings::first();
+    @endphp
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-sm-6">
                 <div class="footer_panel bottom30">
                     <a href="javascript:void(0)" class="logo bottom30"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
                     <p class="bottom15">
-                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                            {{@$settings->description}}
                     </p>
                 </div>
             </div>
             <div class="col-md-5 col-sm-5">
-                <div class="footer_panel bottom30">
-                    <h4 class="bottom30">بحث سريع</h4>
-                    <ul class="tags">
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج مصرى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج إماراتى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج سعودى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> يرغب زوجة ثانية</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج مسيار</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج أميريكى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوجة مصرية</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> مطلقة</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أرمل</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج قطرى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أرملة</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أنسة</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوجة مسيارة</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج عمانى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> مطلق</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج سودانى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أعزب</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج مصرى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج إماراتى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج سعودى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> يرغب زوجة ثانية</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج مسيار</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج أميريكى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوجة مصرية</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> مطلقة</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أرمل</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج قطرى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أرملة</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أنسة</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوجة مسيارة</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج عمانى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> مطلق</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج سودانى</a></li>
-                        <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أعزب</a></li>
-                    </ul>
-                </div>
+                 
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="footer_panel bottom30">
                     <h4 class="bottom30">تواصل معنا</h4>
                     <ul class="getin_touch">
-                        <li><i class="icon-telephone114"></i>01 900 234 567 - 68</li>
-                        <li><a href="javascript:void(0)"><i class="icon-mail-envelope-open"></i>info@al3hd.com</a></li>
-                        <li><i class="icon-icons74"></i>30 ش الهرم - الهرم - جيزة - مصر</li>
+                        <li><i class="icon-telephone114"></i>{{@$settings->mobile_number}}</li>
+                        <li><a href="javascript:void(0)"><i class="icon-mail-envelope-open"></i>{{@$settings->email}}</a></li>
+                        <li><i class="icon-icons74"></i>{{@$settings->address}}</li>
                     </ul>
 
                     <ul class="social_share">
-                        <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i></a></li>
-                        <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i></a></li>
-                        <li><a href="javascript:void(0)" class="google"><i class="icon-google4"></i></a></li>
-                        <li><a href="javascript:void(0)" class="linkden"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i></a></li>
+                        <li><a href="{{@$settings->facebook_link}}" class="facebook"><i class="icon-facebook-1"></i></a></li>
+                        <li><a href="{{@$settings->twitter_link}}" class="twitter"><i class="icon-twitter-1"></i></a></li>
+                        <li><a href="{{@$settings->instagram_link}}" class="linkden"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="{{@$settings->vim_link}}" class="vimo"><i class="icon-vimeo3"></i></a></li>
                     </ul>
                 </div>
             </div>

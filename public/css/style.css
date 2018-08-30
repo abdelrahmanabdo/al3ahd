@@ -824,7 +824,9 @@ nav.navbar.bootsnav{
 .layout_dark nav.navbar.bootsnav,
 .layout_default nav.navbar.bootsnav,
 .layout_boxed nav.navbar.bootsnav{
-  background-color: #8b80f9;
+  /* background-color: #8b80f9; */
+  background-color: #FFF;
+
 }
 .white_header nav.navbar.bootsnav {
   background-color: #fff;
@@ -881,7 +883,8 @@ nav.navbar.bootsnav ul.nav > li > a{
 .layout_dark nav.navbar.bootsnav ul.nav > li > a,
 .layout_default nav.navbar.bootsnav ul.nav > li > a,
 .layout_boxed nav.navbar.bootsnav ul.nav > li > a{
-	color:#fff;
+	/* color:#fff; */
+  color: #403b75;
 }
 .white_header nav.navbar.bootsnav ul.nav > li > a:hover,
 .white_header nav.navbar.bootsnav ul.nav > li > a:focus,
@@ -4443,7 +4446,7 @@ ul.tags li a:hover{
     border-color: #ffeb00;
 }
 .rev_slider_absolute-content a:hover {
-	
+
 }
 
 /*============ Start Members Page ============*/
@@ -4536,10 +4539,10 @@ ul.tags li a:hover{
   color: #3f3a73;
 }
 .widget .widget-header a {
-  
+
 }
 .widget .widget-header a:hover {
-  
+
 }
 .widget .widget-body {
   margin: 20px 0;

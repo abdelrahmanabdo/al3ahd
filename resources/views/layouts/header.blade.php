@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+@php 
 
+use App\GeneralSettings;
+$settings = GeneralSettings::select('email','mobile_number')->first();
+@endphp
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +40,7 @@
                outline: none;
                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
              }
-       
+
              #pac-input {
                background-color: #fff;
                font-family: Roboto;
@@ -47,13 +51,13 @@
                text-overflow: ellipsis;
                width: 300px;
              }
-       
+
              #type-selector {
                color: #fff;
                background-color: #4d90fe;
                padding: 5px 11px 0px 11px;
              }
-       
+
              #type-selector label {
                font-family: Roboto;
                font-size: 13px;
@@ -62,8 +66,8 @@
              #target {
                width: 345px;
              }
-       
-       
+
+
        button[id="search-button"] {
            margin-left: -50px;
            margin-top: 10px;
@@ -74,15 +78,13 @@
            border: 0;
            -webkit-appearance: none;
        }
-       
-       
+
+
        </style>
     @endif
 </head>
 
 <body>
-
-
     <!--Loader-->
     <div class="loader">
         <div class="span">
@@ -111,7 +113,7 @@
                         <li><a href="{{route('contact')}}"><i class="icon-telephone114"></i>إتصل بنا</a></li>
                         <!-- <li><a href="my_properties.html"><i class="icon-icons215"></i>My Property</a></li> -->
                         @auth
-                  <li><a href="{{url('/profile/'.Auth::user()->id)}}"><i class="icon-icons230"></i>الصفحة الشخصية</a></li> 
+                  <li><a href="{{url('/profile/'.Auth::user()->id)}}"><i class="icon-icons230"></i>الصفحة الشخصية</a></li>
                   @endauth
                   @guest
                         <li><a href="{{route('login')}}"><i class="icon-icons179"></i>تسجيل دخول / إشتراك</a></li>
@@ -121,20 +123,46 @@
             </div>
         </div>
     </div>
+    @if (!in_array(Route::currentRouteName(), ['/', 'home' ,'profile' , 'profile-settings']))
+
+    <div class="header-upper">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-sm-12">
+                  <div class="logo"><a href="index.html"><img alt="" src="images/logo.png"></a></div>
+                </div>
+                <!--Info Box-->
+                <div class="col-md-9 col-sm-12 left">
+                  <div class="info-box first">
+                    <div class="icons"><i class="icon-telephone114"></i></div>
+                    <ul>
+                      <li><strong>رقم الهاتف</strong></li>
+                      <li><a href="{{@$settings->mobile_number}}">{{@$settings->mobile_number}}</a></li>
+                    </ul>
+                  </div>
+                  <div class="info-box">
+                    <div class="icons"><i class="icon-icons142"></i></div>
+                    <ul>
+                      <li><strong>البريد الإلكترونى</strong></li>
+                      <li><a href="{{@$settings->email}}">{{@$settings->email}}</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     @endif
-        <nav class="navbar navbar-default bootsnav">
+    
+    @endif
+        <nav class="navbar navbar-default navbar-sticky bootsnav">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="attr-nav">
                             <ul class="clearfix">
                                 @guest
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('تسجيل دخول') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('new-account') }}">{{ __('انشاء حساب') }}</a>
-                                </li>
+                                  <a class="btn-touch" href="{{ route('login') }}">{{ __('تسجيل دخول') }}</a>
+                                  <a class="btn-touch" href="{{ route('new-account') }}">{{ __('انشاء حساب') }}</a>
                                 @else
                                 <li class="dropdown">
                                     <a href="{{url('/profile/'.Auth::user()->id)}}" class="dropdown-toggle user-profile" data-toggle="dropdown">
@@ -168,6 +196,7 @@
                                 @endguest
                             </ul>
                         </div>
+                        
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
             <i class="fa fa-bars"></i>
@@ -176,11 +205,22 @@
                         </div>
                         <div class="collapse navbar-collapse" id="navbar-menu">
                             <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
-                                <li class="active"><a href="{{route('home')}}">الرئيسية </a></li>
-                                <li><a href="{{route('special-members')}}">أعضاء متميزين</a></li>
-                                <li><a href="{{route('new-members')}}">مشتركين جدد</a></li>
-                                <li><a href="{{route('women-mesiar')}}">نساء تقبلن زواج مسيار</a></li>
-                                <li><a href="{{route('women-multi')}}">نساء تقلبن التعدد</a></li>
+                                   
+                                <li  @if(in_array(Route::currentRouteName(), ['home']))
+                                class="active" 
+                               @endif><a href="{{route('home')}}" >الرئيسية </a></li>
+                                <li  @if(in_array(Route::currentRouteName(), ['special-members']))
+                                class="active" 
+                               @endif><a href="{{route('special-members')}}">أعضاء متميزين</a></li>
+                                <li  @if(in_array(Route::currentRouteName(), ['new-members']))
+                                class="active" 
+                               @endif><a href="{{route('new-members')}}">مشتركين جدد</a></li>
+                                <li  @if(in_array(Route::currentRouteName(), ['women-mesiar']))
+                                class="active" 
+                               @endif><a href="{{route('women-mesiar')}}">نساء تقبلن زواج مسيار</a></li>
+                                <li  @if(in_array(Route::currentRouteName(), ['women-multi']))
+                                class="active" 
+                               @endif><a href="{{route('women-multi')}}">نساء تقلبن التعدد</a></li>
                             </ul>
                         </div>
                     </div>

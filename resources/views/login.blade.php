@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-md-12">
         <h1 class="p-white text-uppercase">تسجيل الدخول</h1>
-        <p class="p-white">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p>
+        <!-- <p class="p-white">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p> -->
       </div>
     </div>
   </div>
@@ -24,17 +24,17 @@
           <div class="agent-p-form">
                 @if (session('alert'))
                 <div class="row">
-                
+
                     <div class="alert alert-success col-md-12 ">
                         {{ session('alert') }}
                     </div>
                 </div>
                 @endif
-                
-                
+
+
                 @if ($errors->any())
                 <div class="row">
-                
+
                     <div class="alert alert-danger col-md-12 ">
                         <ul>
                             @foreach ($errors->all() as $error)

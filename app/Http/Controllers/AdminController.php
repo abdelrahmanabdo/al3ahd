@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Image ;
+use Storage ;
+use App\GeneralSettings;
 class AdminController extends Controller
 {
     public function dashboard () {
@@ -58,6 +61,25 @@ class AdminController extends Controller
         return back()->with('alert','تم حظر المستخدم');
     }
 
+
+    public function general_settings () {
+        $settings = GeneralSettings::first();
+        return view('admin.general_settings',['settings'=>$settings]);
+    }
+
+    public function update_settings (Request $request) {
+        $settings = GeneralSettings::first();
+        if($settings != null){
+            $settings->update($request->all())  ;
+        }else{
+            $settings = new GeneralSettings ;
+            $settings->save($request->all())  ;
+
+        }
+        return back()->with('success' , 'تم تحديث البيانات بنجاح');
+    }
+
+
     public function unblock_user ($id) {
         $user = User::findOrFail($id);
         $user->isBlocked = 0 ;
@@ -65,6 +87,7 @@ class AdminController extends Controller
         return back()->with('alert','تم  الغاء الحظر ');
     }
 
+   
 
     public function subscribe_user ($id) {
         $user = User::findOrFail($id);

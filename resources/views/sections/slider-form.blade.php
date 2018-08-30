@@ -15,106 +15,63 @@
     </ul>
   </div>
 
-  <form class="callus top30 clearfix centered">
+  <form class="callus top30 clearfix centered" method="POST" action="{{route('search')}}">
+    @csrf
   <h2 class="text-uppercase t_white bottom20 text-center">إبحث عن شريكك</h2>
     <div class="row">
       <div class="col-sm-6 pdng-3">
         <div class="single-query bottom10">
-          <input type="text" class="keyword-input" placeholder="كلمة مفتاحية">
-        </div>
-      </div>
-      <div class="col-sm-6 pdng-3">
-        <div class="single-query bottom10">
           <div class="intro">
-            <select>
-              <option selected="" value="any">أبحث عن</option>
-              <option>زوج</option>
-              <option>زوجه </option>
-              <option>زواج مسيار</option>
-              <option>ارمل</option>
-              <option>مطلق</option>
-              <option>زوجة ثانية</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 pdng-3">
-        <div class="single-query bottom10">
-          <div class="intro">
-            <select>
-              <option class="active">مقيم فى</option>
-              <option>كل البلاد</option>
-              <option>مصر </option>
-              <option>السعودية</option>
-              <option>البحرين</option>
-              <option>قطر</option>
-              <option>الكويت</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 pdng-3">
-        <div class="single-query bottom10">
-          <div class="intro">
-            <select>
-              <option class="active">الجنسية</option>
-              <option>كل البلاد</option>
-              <option>مصر </option>
-              <option>السعودية</option>
-              <option>البحرين</option>
-              <option>قطر</option>
-              <option>الكويت</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="search-2">
-        <div class="col-sm-6 pdng-3">
-          <div class="single-query bottom10">
-            <div class="intro">
-              <select>
-                <option class="active">اختيار</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-              </select>
+            <select name="education" class="form-control">
+                <option selected="" value=" ">المستوى العلمي</option>
+                <option value="ابتدائي">ابتدائي</option>
+                <option value="متوسط">متوسط</option>
+                <option value="ثانوي">ثانوي</option>
+                <option value="بكالوريوس">بكالوريوس</option>
+                <option value="ماجيستير">ماجيستير</option>
+                <option value="دكتوراه">دكتوراه</option>
+              </select>        
             </div>
           </div>
-        </div>
-        <div class="col-sm-6 pdng-3">
-          <div class="single-query bottom10">
-            <div class="intro">
-              <select>
-                <option class="active">اختيار</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-              </select>
-            </div>
+      </div>
+      <div class="col-sm-6 pdng-3">
+        <div class="single-query bottom10">
+          <div class="intro">
+            <select name="social_status">
+                <option selected="" value=" ">الحالة الاجتماعية</option>
+                <option value="اعزب">اعزب</option>
+                <option value="أنسة">أنسة</option>
+                <option value="مطلق">مطلق</option>
+                <option value="ارمل">ارمل</option>
+                <option value="متزوج">متزوج</option>
+            </select>
           </div>
         </div>
       </div>
+     
       <div class="col-sm-6 pdng-3">
         <div class="single-query bottom10">
-          <input type="text" class="keyword-input" placeholder="كلمة مفتاحية">
+          <input type="text" name="country" value=" " class="keyword-input" placeholder="البلد">
         </div>
       </div>
       <div class="col-sm-6 pdng-3">
         <div class="single-query bottom10">
-          <input type="text" class="keyword-input" placeholder="كبمة مفتاحية">
-        </div>
+          <div class="intro">
+            <select name="gender" class="form-control">
+                <option selected="" value=" "> الجنس</option>
+                <option value="ذكر">ذكر</option>
+                <option value="انثى">انثى</option>
+              </select>        
+            </div>
+          </div>
       </div>
+      
     </div>
       <div class="col-md-4 col-sm-4 col-xs-4 text-right form-group pdng-3">
         <button type="submit" class="border_radius btn-yellow text-uppercase">إبحث</button>
       </div>
     </div>
+  </div>
 
   </form>
 </div>

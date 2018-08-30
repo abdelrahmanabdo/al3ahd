@@ -1,6 +1,16 @@
 @extends('layouts.layout')
 @section('content')
-
+<section class="page-banner page-banner-bg padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="p-white text-uppercase">الاسئلة الأكثر شيوعاً</h1>
+              <!-- <p class="p-white">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page Banner End -->
 <!-- News Start -->
 <section id="news-section-1" class="property-details padding_top">
     <div class="container">
@@ -138,7 +148,7 @@
           </aside>
           <div class="col-md-9 col-sm-8">
               <div class="row">
-           
+
                   <div class="col-sm-12">
                    <div class="panel-group" id="accordion">
         <div class="panel panel-default">
@@ -209,7 +219,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
@@ -249,15 +259,15 @@
                 </div>
             </div>
         </div>
-        
-        
-        
-        
+
+
+
+
     </div>
-            
-            
-            
-            
+
+
+
+
           </div>
                   </div>
           </div>

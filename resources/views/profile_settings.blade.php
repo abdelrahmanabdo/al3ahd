@@ -1,13 +1,13 @@
-@extends('layouts.layout') 
+@extends('layouts.layout')
 @section('content')
 <!-- Page Banner Start-->
 <section class="page-banner page-banner-bg padding">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="p-white text-uppercase">عنوان الصفحة</h1>
-        <p class="p-white">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-          توضع الفقرات في الصفحة التي يقرأها.</p>
+        <h1 class="p-white text-uppercase">إعدادات الحساب</h1>
+        <!-- <p class="p-white">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+          توضع الفقرات في الصفحة التي يقرأها.</p> -->
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
           <img src="{{$user->profile_picture ? asset('storage/avatars/'.$user->profile_picture) : 'images/img-profile.jpg'}}" class="img-responsive" alt="image" />
           <form method="POST" action="{{route('updateUserAvatar', $user->id)}}"  enctype="multipart/form-data">
             @csrf
-              <input type="file" name="avatar"  class="top10 bottom20"/>  
+              <input type="file" name="avatar"  class="top10 bottom20"/>
               <button type="submit" class="top10 bottom20">تحديث الصورة الشخصية</button>
           </form>
           <p class="">بحد ادنى 215بيكسيل X 215بيكسيل<span>*</span></p>
@@ -382,7 +382,18 @@
       <div class="col-md-5 col-sm-6 col-xs-12 profile-form margin40">
         <h3 class=" bottom30 margin40">تغيير كلمة المرور</h3>
         <div class="row">
-          <form class="callus">
+            @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+          <form class="callus" method="POST" action="{{ route('changePassword') }}">
+            @csrf
             <div class="col-sm-4">
               <div class="single-query">
                 <label>كلمة المرور الحالية:</label>
@@ -390,7 +401,7 @@
             </div>
             <div class="col-sm-8">
               <div class="single-query form-group">
-                <input type="password" class="keyword-input">
+                <input type="password" name="current-password" required class="keyword-input">
               </div>
             </div>
             <div class="col-sm-4">
@@ -400,7 +411,7 @@
             </div>
             <div class="col-sm-8">
               <div class="single-query form-group">
-                <input type="password" class="keyword-input">
+                <input type="password"  name="new-password" required   class="keyword-input">
               </div>
             </div>
             <div class="col-sm-4">
@@ -410,11 +421,11 @@
             </div>
             <div class="col-sm-8">
               <div class="single-query form-group">
-                <input type="password" class="keyword-input">
+                <input type="password"  name="new-password_confirmation" required class="keyword-input">
               </div>
             </div>
             <div class="col-sm-12 text-right">
-              <a class="btn-blue border_radius" href="#">خفظ التغييرات</a>
+              <button class="btn-blue border_radius" type="submit" href="#">حفظ التغييرات</button>
             </div>
           </form>
         </div>

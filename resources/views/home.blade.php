@@ -1,6 +1,154 @@
 @extends('layouts.layout') 
 @section('content')
 
+<section id="property" class="padding bg_gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <h2 class="uppercase">أجدد الاعضاء</h2>
+              <p class="heading_space">خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام 45 قبل الميلاد، مما </p>
+            </div>
+          </div>
+          <div class="clearfix">
+            <div id="filters-property" class="cbp-l-filters-button text-center">
+              <div data-filter=".latest" class="cbp-filter-item-active cbp-filter-item">أعزب</div>
+              <div data-filter=".sale" class="cbp-filter-item">أرمل</div>
+              <div data-filter=".rent" class="cbp-filter-item">مسيار</div>
+            </div>
+          </div>
+          <div id="property-gallery" class="cbp listing1">
+            <div class="cbp-item latest marride">
+              <div class="property_item user-box">
+                <div class="image">
+                  <a href="user-profile.html"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
+                  <a href="user-profile.html"><img src="images/user-img.jpg" alt="" class="user-img"></a>
+                </div>
+                <div class="proerty_content">
+                  <div class="proerty_text">
+                    <h3 class="captlize"><a href="user-profile.html">إبراهيم السيد مرعى</a></h3>
+                    <p>أرمل - جاد - مستقر ماديا - مرح - لدى طفبين</p>
+                  </div>
+                  <div class="property_meta transparent">
+                    <span><i class="fa fa-address-card-o" aria-hidden="true"></i>مصرى</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>ليبيا</span>
+                    <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><bdi> 42</bdi>سنة</span>
+                  </div>
+                  <div class="property_meta transparent bottom30">
+                    <span><i class="fa fa-briefcase" aria-hidden="true"></i>مهندس مدنى</span>
+                    <span><i class="fa fa-child" aria-hidden="true"></i>طفلين</span>
+                    <span></span>
+                  </div>
+                  <div class="favroute clearfix">
+                    <p><i class="icon-calendar2"></i>&nbsp;<a href="user-profile.html">الصفحة الشخصية</a> </p>
+                    <ul class="pull-right">
+                      <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                      <li><a href="javascript:void(0)"><i class="icon-blocked"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="toggle_share collapse" id="seventy">
+                    <ul>
+                      <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                      <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                      <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cbp-item latest single">
+              <div class="property_item user-box">
+                <div class="image">
+                  <a href="user-profile.html"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
+                  <a href="user-profile.html"><img src="images/user-img.jpg" alt="" class="user-img"></a>
+                </div>
+                <div class="proerty_content">
+                  <div class="proerty_text">
+                    <h3 class="captlize"><a href="user-profile.html">إبراهيم السيد مرعى</a></h3>
+                    <p>أرمل - جاد - مستقر ماديا - مرح - لدى طفبين</p>
+                  </div>
+                  <div class="property_meta transparent">
+                    <span><i class="fa fa-address-card-o" aria-hidden="true"></i>مصرى</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>ليبيا</span>
+                    <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><bdi> 42</bdi>سنة</span>
+                  </div>
+                  <div class="property_meta transparent bottom30">
+                    <span><i class="fa fa-briefcase" aria-hidden="true"></i>مهندس مدنى</span>
+                    <span><i class="fa fa-child" aria-hidden="true"></i>طفلين</span>
+                    <span></span>
+                  </div>
+                  <div class="favroute clearfix">
+                    <p><i class="icon-calendar2"></i>&nbsp;<a href="user-profile.html">الصفحة الشخصية</a> </p>
+                    <ul class="pull-right">
+                      <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                      <li><a href="javascript:void(0)"><i class="icon-blocked"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="toggle_share collapse" id="seventy">
+                    <ul>
+                      <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                      <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                      <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cbp-item latest marride">
+              <div class="property_item user-box">
+                <div class="image">
+                  <a href="user-profile.html"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
+                  <a href="user-profile.html"><img src="images/user-img.jpg" alt="" class="user-img"></a>
+                </div>
+                <div class="proerty_content">
+                  <div class="proerty_text">
+                    <h3 class="captlize"><a href="user-profile.html">إبراهيم السيد مرعى</a></h3>
+                    <p>أرمل - جاد - مستقر ماديا - مرح - لدى طفبين</p>
+                  </div>
+                  <div class="property_meta transparent">
+                    <span><i class="fa fa-address-card-o" aria-hidden="true"></i>مصرى</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>ليبيا</span>
+                    <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><bdi> 42</bdi>سنة</span>
+                  </div>
+                  <div class="property_meta transparent bottom30">
+                    <span><i class="fa fa-briefcase" aria-hidden="true"></i>مهندس مدنى</span>
+                    <span><i class="fa fa-child" aria-hidden="true"></i>طفلين</span>
+                    <span></span>
+                  </div>
+                  <div class="favroute clearfix">
+                    <p><i class="icon-calendar2"></i>&nbsp;<a href="user-profile.html">الصفحة الشخصية</a> </p>
+                    <ul class="pull-right">
+                      <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                      <li><a href="javascript:void(0)"><i class="icon-blocked"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="toggle_share collapse" id="seventy">
+                    <ul>
+                      <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                      <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                      <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 text-center top20">
+             <a href="new-members.html" class="btn-dark border_radius uppercase margin40">المزيد من الأعضاء</a>
+          </div>
+        </div>
+      </section>
+
+{{--  
+
+
+
+
+
+
+
+
+
+
 <!-- Gallery -->
 <section id="property" class="padding bg_gallery">
     <div class="container">
@@ -13,14 +161,74 @@
         </div>
         <div class="clearfix">
             <div id="filters-property" class="cbp-l-filters-button text-center">
-                <div data-filter=".latest" class="cbp-filter-item-active cbp-filter-item">أعزب</div>
-                <div data-filter=".sale" class="cbp-filter-item">أرمل</div>
-                <div data-filter=".rent" class="cbp-filter-item">مسيار</div>
+                <div data-filter=".single" class="cbp-filter-item-active cbp-filter-item">أعزب</div>
+                <div data-filter=".devorced" class="cbp-filter-item">أرمل</div>
+                <div data-filter=".mesyar" class="cbp-filter-item">مسيار</div>
             </div>
         </div>
         <div id="property-gallery" class="cbp listing1">
+                <div class="cbp-item single marride">
+
+                @forelse($a3zbUsers as $a3zb)
+                    <div class="property_item user-box">
+                        <div class="image">
+                            <a href="#"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
+                            <a href="#"><img src="{{$a3zb->profile_picture ? asset('storage/avatars/'.$a3zb->profile_picture) : 'images/img-profile.jpg'}}" alt="" class="user-img"></a>
+                        </div>
+                        <div class="proerty_content">
+                            <div class="proerty_text">
+                                <h3 class="captlize"><a href="#">{{$a3zb->username}}</a></h3>
+                                <p>{{$a3zb->about_me}}</p>
+                            </div>
+                            <div class="property_meta transparent">
+                                <span><i class="fa fa-address-card-o" aria-hidden="true"></i>{{$a3zb->nationality}}</span>
+                                <span><i class="fa fa-map-marker" aria-hidden="true"></i>{{$a3zb->country}}</span>
+                                <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><bdi> {{$a3zb->age}}</bdi>سنة</span>
+                            </div>
+                            <div class="property_meta transparent bottom30">
+                                <span><i class="fa fa-briefcase" aria-hidden="true"></i>{{$a3zb->profession}}</span>
+                                <span><i class="fa fa-child" aria-hidden="true"></i>
+                    @if($a3zb->children === 0)
+                    ليس لديه الاطفال
+                @elseif($a3zb->children === 1)
+                طفل
+                @elseif($a3zb->children === 2)
+                طفلين
+                @elseif($a3zb->children === 3)
+                3 أطفال
+                @elseif($a3zb->children === 4)
+                4 أطفال
+                @elseif($a3zb->children === 5)
+                5 أطفال
+                @endif
+                    </span>
+                                <span></span>
+                            </div>
+                            <div class="favroute clearfix">
+                                <p><i class="icon-calendar2"></i>&nbsp;<a href="{{url('/profile/'.$a3zb->id)}}">الصفحة الشخصية</a>                                </p>
+                                <ul class="pull-right">
+                                    <li><a href="javascript:void(0)"><i class="icon-blocked"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="toggle_share collapse" id="seventy">
+                                <ul>
+                                    <li><a href="{{$a3zb->facebook_link}}" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                    <li><a href="{{$a3zb->twitter_link}}" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                    <li><a href="{{$a3zb->gmail_link}}" class="twitter"><i class="icon-google"></i> Gmail</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                @empty 
+    
+                 <h3 class="well col-md-12">لا يوحد نتائج</h3>
+                
+                @endforelse
+            </div>
+            <div class="cbp-item devorced marride">
+
             @forelse($armlUsers as $arml)
-            <div class="cbp-item latest marride">
                 <div class="property_item user-box">
                     <div class="image">
                         <a href="#"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
@@ -70,75 +278,17 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
             @empty 
    
-               <h3 class="well">لا يوحد نتائج</h3>
+               <h3 class="well col-md-12">لا يوحد نتائج</h3>
 
             @endforelse 
-            
-            @forelse($a3zbUsers as $a3zb)
-            <div class="cbp-item sale marride">
-                <div class="property_item user-box">
-                    <div class="image">
-                        <a href="#"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
-                        <a href="#"><img src="{{$a3zb->profile_picture ? asset('storage/avatars/'.$a3zb->profile_picture) : 'images/img-profile.jpg'}}" alt="" class="user-img"></a>
-                    </div>
-                    <div class="proerty_content">
-                        <div class="proerty_text">
-                            <h3 class="captlize"><a href="#">{{$a3zb->username}}</a></h3>
-                            <p>{{$a3zb->about_me}}</p>
-                        </div>
-                        <div class="property_meta transparent">
-                            <span><i class="fa fa-address-card-o" aria-hidden="true"></i>{{$a3zb->nationality}}</span>
-                            <span><i class="fa fa-map-marker" aria-hidden="true"></i>{{$a3zb->country}}</span>
-                            <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><bdi> {{$a3zb->age}}</bdi>سنة</span>
-                        </div>
-                        <div class="property_meta transparent bottom30">
-                            <span><i class="fa fa-briefcase" aria-hidden="true"></i>{{$a3zb->profession}}</span>
-                            <span><i class="fa fa-child" aria-hidden="true"></i>
-                @if($a3zb->children === 0)
-                ليس لديه الاطفال
-            @elseif($a3zb->children === 1)
-            طفل
-            @elseif($a3zb->children === 2)
-            طفلين
-            @elseif($a3zb->children === 3)
-            3 أطفال
-            @elseif($a3zb->children === 4)
-            4 أطفال
-            @elseif($a3zb->children === 5)
-            5 أطفال
-            @endif
-                </span>
-                            <span></span>
-                        </div>
-                        <div class="favroute clearfix">
-                            <p><i class="icon-calendar2"></i>&nbsp;<a href="{{url('/profile/'.$a3zb->id)}}">الصفحة الشخصية</a>                                </p>
-                            <ul class="pull-right">
-                                <li><a href="javascript:void(0)"><i class="icon-blocked"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="toggle_share collapse" id="seventy">
-                            <ul>
-                                <li><a href="{{$a3zb->facebook_link}}" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                                <li><a href="{{$a3zb->twitter_link}}" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                                <li><a href="{{$a3zb->gmail_link}}" class="twitter"><i class="icon-google"></i> Gmail</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <div class="cbp-item mesyar marride">
 
-            @empty 
-
-             <h3 class="well">لا يوحد نتائج</h3>
-            
-            @endforelse
-            
             @forelse($misyarUsers as $misyar)
-            <div class="cbp-item rent marride">
+            
                 <div class="property_item user-box">
                     <div class="image">
                         <a href="#"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
@@ -188,12 +338,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
             @empty
 
-               <h3 class="well">لا يوحد نتائج</h3>
+               <h3 class="well col-md-12">لا يوحد نتائج</h3>
             
              @endforelse
+            </div>
+        </div>
+    </div>
         </div>
         <div class="col-sm-12 text-center top20">
             <a href="{{route('new-members')}}" class="btn-dark border_radius uppercase margin40">المزيد من الأعضاء</a>
@@ -232,7 +384,7 @@
         </div>
     </div>
 </section>
-<!--About Owner ends-->
+<!--About Owner ends-->  --}}
 
 {{--  
 <!--Testinomials-->

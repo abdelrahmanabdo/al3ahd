@@ -6,8 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="p-white text-uppercase">عنوان الصفحة</h1>
-                    <p class="p-white">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p>
+                    <h1 class="p-white text-uppercase">الأعضاء المتميزين</h1>
+                    <!-- <p class="p-white">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p> -->
                 </div>
             </div>
         </div>
@@ -60,13 +60,13 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-xs-5">
-                                            <div class="checkbox pull-left">
+                                            {{--  <div class="checkbox pull-left">
                                                 <label>
                                                     <input type="checkbox"> تذكرنى
                                                 </label>
-                                            </div>
+                                            </div>  --}}
                                         </div>
-                                        <div class="col-xs-7">
+                                        <div class="col-xs-12">
                                             <div class="checkbox pull-right">
                                                 <a href="fotget-password.html">نسيت كلمة المرور</a>
                                             </div>
@@ -76,7 +76,7 @@
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default btn-block">تسجيل دخول</button>
                                 </div>
-                                <div class="new-account-link">ليس لدى حساب. <a href="new-account.html"> إنشاء حساب</a></div>
+                                <div class="new-account-link">ليس لدى حساب. <a href="{{route('new-account')}}"> إنشاء حساب</a></div>
                             </form>
                         </div>
                     </div>
@@ -88,92 +88,39 @@
                         <div class="widget-profile">
                             <ul class="account-control">
                                 <li class="with-notify">
-                                    <a href="inbox-page.html">
-                                        <span>3</span>
-                                        <i class="fa fa-inbox" aria-hidden="true"></i> البريد الوارد
+                                    <a href="{{route('receivedInbox',auth()->user()->id)}}">
+                                        <i class="fa fa-inbox"  aria-hidden="true"></i> البريد الوارد
                                     </a>
                                 </li>
-                                <li><a href="sent-page.html">
+                                <li><a href="{{route('sentInbox',auth()->user()->id)}}">
                                         <i class="fa fa-paper-plane" aria-hidden="true"></i> البريد الصادر
                                     </a></li>
-                                <li><a href="block-page.html">
+                                <li><a href="{{route('blockList')}}">
                                         <i class="fa fa-ban" aria-hidden="true"></i> قائمة الحظر
                                     </a></li>
-                                <li><a href="profile-settings.html">
+                                <li><a href="{{url('/profile-settings/'.auth()->user()->id)}}">
                                         <i class="fa fa-sliders" aria-hidden="true"></i>إعدادات الحساب
                                     </a></li>
-                                <li><a href="change-password.html">
+                                <li><a href="{{route('change_password')}}">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>تغيير كلمة المرور
                                     </a></li>
-                                <li><a href="remove-my-account.html">
+                                <li><a href="{{route('removeAccount')}}">
                                         <i class="fa fa-trash" aria-hidden="true"></i>حذف عضويتى من الموقع
                                     </a></li>
                                 <li><a href="sent-manager.html">
                                         <i class="fa fa-envelope" aria-hidden="true"></i>مراسلة إدارة الموقع
                                     </a></li>
-                                <li><a href="">
-                                        <i class="fa fa-sign-out" aria-hidden="true"></i>تسجيل الخروج
-                                    </a></li>
+                                <li> <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();" class="btn-cart">تسجيل خروج</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form></li>
                             </ul>
                         </div>
                     </div>
                     @endauth
                     <!-- //widget -->
-                    <!-- widget -->
-                    <div class="widget">
-                        <div class="widget-header">
-                            <h3>بحث سريع</h3>
-                        </div>
-                        <div class="widget-body">
-                            <ul class="tags">
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج مصرى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج إماراتى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج سعودى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> يرغب زوجة ثانية</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج مسيار</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج أميريكى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوجة مصرية</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> مطلقة</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أرمل</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج قطرى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أرملة</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أنسة</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوجة مسيارة</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج عمانى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> مطلق</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج سودانى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أعزب</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج مصرى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج إماراتى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج سعودى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> يرغب زوجة ثانية</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج مسيار</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج أميريكى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوجة مصرية</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> مطلقة</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أرمل</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج قطرى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أرملة</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أنسة</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوجة مسيارة</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج عمانى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> مطلق</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> زوج سودانى</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-tags" aria-hidden="true"></i> أعزب</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- //widget -->
-                    <!-- widget -->
-                    <!-- <div class="widget">
-                      <div class="widget-header">
-                        <h3>تسجيل الدخول</h3>
-                      </div>
-                      <div class="widget-body">
-                        عاااااااااااا
-                      </div>
-                      </div> -->
-                    <!-- //widget -->
+                
                 </aside>
                 <div class="col-md-9 col-sm-8 col-xs-12">
                     <div class="members">

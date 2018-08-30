@@ -83,4 +83,12 @@ class NavigationController extends Controller
     public function new_account () {
         return view('new_account');      
     }
+
+    public function remove_account () {
+        return view('remove_account');
+    }
+
+    public function changePassword() {
+        return view('change_password');
+    }
 }

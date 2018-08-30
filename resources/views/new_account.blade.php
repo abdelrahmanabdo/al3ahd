@@ -7,8 +7,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="p-white text-uppercase">عنوان الصفحة</h1>
-        <p class="p-white">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p>
+        <h1 class="p-white text-uppercase">إنشاء حساب</h1>
+        <!-- <p class="p-white">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p> -->
       </div>
     </div>
   </div>
@@ -20,17 +20,17 @@
     <div class="row">
             @if (session('alert'))
             <div class="row">
-            
+
                 <div class="alert alert-success col-md-8 col-md-offset-2 ">
                     {{ session('alert') }}
                 </div>
             </div>
             @endif
-            
-            
+
+
             @if ($errors->any())
             <div class="row">
-            
+
                 <div class="alert alert-danger col-md-8 col-md-offset-2 ">
                     <ul>
                         @foreach ($errors->all() as $error)
@@ -315,7 +315,7 @@
           <div class="col-xs-12">
             <div class="checkbox pull-left">
               <label>
-                <input type="checkbox"> 
+                <input type="checkbox">
                 قسم بالله العظيم أني لم أدخل هذا الموقع الا بهدف الزواج الشرعي وفق كتاب الله و سنة رسوله , وليس لأي هدف آخر . وأعاهد الله وأعاهدكم على أن لا أضيع تعب الموقع , وأن لا أخدع الأعضاء , وأن أكون صادقا مع الله ثم مع نفسي , وأن ألتزم بشروط الموقع , و شروط المراسلة فيه , عسى ربي يكتب لي الخير في هذا المكان . والله خير الشاهدين
               </label>
             </div>
