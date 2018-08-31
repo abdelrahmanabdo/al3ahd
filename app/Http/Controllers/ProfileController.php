@@ -8,6 +8,8 @@ use Image ;
 use Storage ;
 use Hash;
 use Auth;
+use App\Abuses;
+use App\askSubscription;
 class ProfileController extends Controller
 {
     public function update_socail_links (Request $request , $id) {
@@ -84,5 +86,28 @@ class ProfileController extends Controller
         }
     }
 
+
+    public function report_abuse (Request $request , $id) {
+        $abuses = new Abuses ;
+        $abuses->abuseContent = $request->abuseContent;
+        $abuses->user_id = $id;
+        if($abuses->save())
+        {
+        return back()->with('success','تم ارسال الإساءة بنجاح');
+        }else{
+        return back()->with('success','حدث خطأاثناء ارسال الرسالة');
+
+        }   
+    }
+
+    public function ask_subscription(Request $request) {
+        $subscribe = new askSubscription ;
+        $subscribe->email = $request->email;
+        $subscribe->mobile_number = $request->mobile_number;
+        $subscribe->user_id = auth()->user()->id;
+        if($subscribe->save()){
+            return back()->with('success','تم ارسال طلب الترقية بنجاح');
+        }
+    }
 
 }

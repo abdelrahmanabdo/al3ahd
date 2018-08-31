@@ -47,6 +47,8 @@ Route::get('/policy', 'NavigationController@policy')->name('policy');
 Route::get('/qasam', 'NavigationController@qasam')->name('qasam');
 Route::post('/removeAccount','ProfileController@removeAccount')->name('removeAccount');
 Route::get('/removeAccount','NavigationController@remove_account')->name('removeAccount');
+Route::post('/reportAbuse/{id}','ProfileController@report_abuse')->name('reportAbuse');
+Route::post('/askSubscription','ProfileController@ask_subscription')->name('askSubscription');
 
 
 Route::get('/inbox/received/{id}','MessagesController@user_received_messages')->name('receivedInbox');
@@ -58,6 +60,9 @@ Route::group(['prefix' => 'admin/963124/' , 'middleware'=>['web']], function () 
     Route::get('all-members','AdminController@all_members')->name('allMembers');
     Route::get('blocked-members','AdminController@blocked_members')->name('blockedMembers');
     Route::get('special-members','AdminController@special_members')->name('specialMembers');
+    Route::get('subscription','AdminController@subscription_page')->name('subscription');
+    Route::get('unsubecribeUser','AdminController@abuses_messages_page')->name('abuses');
+
     Route::get('generalSettings' ,'AdminController@general_settings')->name('generalSettings');
     Route::post('generalSettings','AdminController@update_settings')->name('updateSettings');
     Route::get('user/{id}','AdminController@get_user_data')->name('userDetails');
@@ -65,8 +70,6 @@ Route::group(['prefix' => 'admin/963124/' , 'middleware'=>['web']], function () 
     Route::get('unblockUser/{id}','AdminController@unblock_user')->name('unblockUser');
     Route::get('subecribeUser/{id}','AdminController@subscribe_user')->name('subscribeUser');
     Route::get('unsubecribeUser/{id}','AdminController@unsubscribe_user')->name('unsubscribeUser');
-
-
 });
 /**
  *  End navigation

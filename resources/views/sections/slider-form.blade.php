@@ -51,7 +51,7 @@
      
       <div class="col-sm-6 pdng-3">
         <div class="single-query bottom10">
-          <input type="text" name="country" value=" " class="keyword-input" placeholder="البلد">
+          <input type="text" name="country" value="" class="keyword-input" placeholder="البلد">
         </div>
       </div>
       <div class="col-sm-6 pdng-3">

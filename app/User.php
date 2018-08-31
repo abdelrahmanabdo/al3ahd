@@ -13,9 +13,11 @@ class User extends Authenticatable
         return $this->hasMany('App\messages');
     }
 
-    public function blockedUsers(){
-        return $this->hasMany('App\blocks');
+
+    public function abuses (){
+        return $this->hasMany('App\Abuses');
     }
+
     /**
      * The attributes that are mass assignable.
      *

@@ -1,146 +1,6 @@
 @extends('layouts.layout') 
 @section('content')
 
-<section id="property" class="padding bg_gallery">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 text-center">
-              <h2 class="uppercase">أجدد الاعضاء</h2>
-              <p class="heading_space">خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام 45 قبل الميلاد، مما </p>
-            </div>
-          </div>
-          <div class="clearfix">
-            <div id="filters-property" class="cbp-l-filters-button text-center">
-              <div data-filter=".latest" class="cbp-filter-item-active cbp-filter-item">أعزب</div>
-              <div data-filter=".sale" class="cbp-filter-item">أرمل</div>
-              <div data-filter=".rent" class="cbp-filter-item">مسيار</div>
-            </div>
-          </div>
-          <div id="property-gallery" class="cbp listing1">
-            <div class="cbp-item latest marride">
-              <div class="property_item user-box">
-                <div class="image">
-                  <a href="user-profile.html"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
-                  <a href="user-profile.html"><img src="images/user-img.jpg" alt="" class="user-img"></a>
-                </div>
-                <div class="proerty_content">
-                  <div class="proerty_text">
-                    <h3 class="captlize"><a href="user-profile.html">إبراهيم السيد مرعى</a></h3>
-                    <p>أرمل - جاد - مستقر ماديا - مرح - لدى طفبين</p>
-                  </div>
-                  <div class="property_meta transparent">
-                    <span><i class="fa fa-address-card-o" aria-hidden="true"></i>مصرى</span>
-                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>ليبيا</span>
-                    <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><bdi> 42</bdi>سنة</span>
-                  </div>
-                  <div class="property_meta transparent bottom30">
-                    <span><i class="fa fa-briefcase" aria-hidden="true"></i>مهندس مدنى</span>
-                    <span><i class="fa fa-child" aria-hidden="true"></i>طفلين</span>
-                    <span></span>
-                  </div>
-                  <div class="favroute clearfix">
-                    <p><i class="icon-calendar2"></i>&nbsp;<a href="user-profile.html">الصفحة الشخصية</a> </p>
-                    <ul class="pull-right">
-                      <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
-                      <li><a href="javascript:void(0)"><i class="icon-blocked"></i></a></li>
-                    </ul>
-                  </div>
-                  <div class="toggle_share collapse" id="seventy">
-                    <ul>
-                      <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                      <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                      <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cbp-item latest single">
-              <div class="property_item user-box">
-                <div class="image">
-                  <a href="user-profile.html"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
-                  <a href="user-profile.html"><img src="images/user-img.jpg" alt="" class="user-img"></a>
-                </div>
-                <div class="proerty_content">
-                  <div class="proerty_text">
-                    <h3 class="captlize"><a href="user-profile.html">إبراهيم السيد مرعى</a></h3>
-                    <p>أرمل - جاد - مستقر ماديا - مرح - لدى طفبين</p>
-                  </div>
-                  <div class="property_meta transparent">
-                    <span><i class="fa fa-address-card-o" aria-hidden="true"></i>مصرى</span>
-                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>ليبيا</span>
-                    <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><bdi> 42</bdi>سنة</span>
-                  </div>
-                  <div class="property_meta transparent bottom30">
-                    <span><i class="fa fa-briefcase" aria-hidden="true"></i>مهندس مدنى</span>
-                    <span><i class="fa fa-child" aria-hidden="true"></i>طفلين</span>
-                    <span></span>
-                  </div>
-                  <div class="favroute clearfix">
-                    <p><i class="icon-calendar2"></i>&nbsp;<a href="user-profile.html">الصفحة الشخصية</a> </p>
-                    <ul class="pull-right">
-                      <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
-                      <li><a href="javascript:void(0)"><i class="icon-blocked"></i></a></li>
-                    </ul>
-                  </div>
-                  <div class="toggle_share collapse" id="seventy">
-                    <ul>
-                      <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                      <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                      <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cbp-item latest marride">
-              <div class="property_item user-box">
-                <div class="image">
-                  <a href="user-profile.html"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
-                  <a href="user-profile.html"><img src="images/user-img.jpg" alt="" class="user-img"></a>
-                </div>
-                <div class="proerty_content">
-                  <div class="proerty_text">
-                    <h3 class="captlize"><a href="user-profile.html">إبراهيم السيد مرعى</a></h3>
-                    <p>أرمل - جاد - مستقر ماديا - مرح - لدى طفبين</p>
-                  </div>
-                  <div class="property_meta transparent">
-                    <span><i class="fa fa-address-card-o" aria-hidden="true"></i>مصرى</span>
-                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>ليبيا</span>
-                    <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><bdi> 42</bdi>سنة</span>
-                  </div>
-                  <div class="property_meta transparent bottom30">
-                    <span><i class="fa fa-briefcase" aria-hidden="true"></i>مهندس مدنى</span>
-                    <span><i class="fa fa-child" aria-hidden="true"></i>طفلين</span>
-                    <span></span>
-                  </div>
-                  <div class="favroute clearfix">
-                    <p><i class="icon-calendar2"></i>&nbsp;<a href="user-profile.html">الصفحة الشخصية</a> </p>
-                    <ul class="pull-right">
-                      <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
-                      <li><a href="javascript:void(0)"><i class="icon-blocked"></i></a></li>
-                    </ul>
-                  </div>
-                  <div class="toggle_share collapse" id="seventy">
-                    <ul>
-                      <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                      <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                      <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 text-center top20">
-             <a href="new-members.html" class="btn-dark border_radius uppercase margin40">المزيد من الأعضاء</a>
-          </div>
-        </div>
-      </section>
-
-{{--  
-
-
 
 
 
@@ -172,8 +32,8 @@
                 @forelse($a3zbUsers as $a3zb)
                     <div class="property_item user-box">
                         <div class="image">
-                            <a href="#"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
-                            <a href="#"><img src="{{$a3zb->profile_picture ? asset('storage/avatars/'.$a3zb->profile_picture) : 'images/img-profile.jpg'}}" alt="" class="user-img"></a>
+                            <a href="{{url('/profile/'.$a3zb->id)}}"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
+                            <a href="{{url('/profile/'.$a3zb->id)}}"><img src="{{$a3zb->profile_picture ? asset('storage/avatars/'.$a3zb->profile_picture) : 'images/img-profile.jpg'}}" alt="" class="user-img"></a>
                         </div>
                         <div class="proerty_content">
                             <div class="proerty_text">
@@ -231,8 +91,8 @@
             @forelse($armlUsers as $arml)
                 <div class="property_item user-box">
                     <div class="image">
-                        <a href="#"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
-                        <a href="#"><img src="{{$arml->profile_picture ? asset('storage/avatars/'.$arml->profile_picture) : 'images/img-profile.jpg'}}" alt="" class="user-img"></a>
+                        <a href="{{url('/profile/'.$arml->id)}}"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
+                        <a href="{{url('/profile/'.$arml->id)}}"><img src="{{$arml->profile_picture ? asset('storage/avatars/'.$arml->profile_picture) : 'images/img-profile.jpg'}}" alt="" class="user-img"></a>
                     </div>
                     <div class="proerty_content">
                         <div class="proerty_text">
@@ -291,8 +151,8 @@
             
                 <div class="property_item user-box">
                     <div class="image">
-                        <a href="#"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
-                        <a href="#"><img src="{{$misyar->profile_picture ? asset('storage/avatars/'.$misyar->profile_picture) : 'images/img-profile.jpg'}}" alt="" class="user-img"></a>
+                        <a href="{{url('/profile/'.$misyar->id)}}"><img src="images/listing1.jpg" alt="" class="img-responsive user-cover"></a>
+                        <a href="{{url('/profile/'.$misyar->id)}}"><img src="{{$misyar->profile_picture ? asset('storage/avatars/'.$misyar->profile_picture) : 'images/img-profile.jpg'}}" alt="" class="user-img"></a>
                     </div>
                     <div class="proerty_content">
                         <div class="proerty_text">
@@ -384,111 +244,6 @@
         </div>
     </div>
 </section>
-<!--About Owner ends-->  --}}
+<!--About Owner ends-->  
 
-{{--  
-<!--Testinomials-->
-<section id="testinomialBg" class="padding bg_light">
-    <div id="agent-2" class="padding_bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <h2 class="uppercase">أخر زيجات تمت بفضل الله</h2>
-                    <p>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر
-                        أو الكلمات العشوائية إلى النص.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 margin40">
-                    <div class="agent_wrap">
-                        <div class="image">
-                            <img src="images/agent-one.jpg" alt="Agents">
-                            <div class="img-info">
-                                <h3>أحمد و فاطمة</h3>
-                                <span>عازب - عازبة</span>
-                                <p class="top20 bottom30">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر
-                                    إدخال بعض النوادر أو الكلمات العشوائية إلى النص.</p>
-                                <table class="agent_contact table">
-                                    <tbody>
-                                        <tr class="bottom10">
-                                            <td><strong>أحمد:</strong></td>
-                                            <td class="text-right">مصر</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>فاطمة:</strong></td>
-                                            <td class="text-right"><a href="#.">البحرين</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <hr>
-                                <a class="btn-more" href="blank.html">
-              <i><img alt="arrow" src="images/arrow-yellow.png"></i><span>إقرأ المزيد</span><i><img alt="arrow" src="images/arrow-yellow.png"></i>
-              </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 margin40">
-                    <div class="agent_wrap">
-                        <div class="image">
-                            <img src="images/agent-five.jpg" alt="Agents">
-                            <div class="img-info">
-                                <h3>عبد الرحمن و وسام</h3>
-                                <span>أرمل - مطلقة</span>
-                                <p class="top20 bottom30">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر
-                                    إدخال بعض النوادر أو الكلمات العشوائية إلى النص.</p>
-                                <table class="agent_contact table">
-                                    <tbody>
-                                        <tr class="bottom10">
-                                            <td><strong>عبد الرحمن:</strong></td>
-                                            <td class="text-right">الكويت</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>وسام:</strong></td>
-                                            <td class="text-right"><a href="#">الكويت</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <hr>
-                                <a class="btn-more" href="blank.html">
-              <i><img alt="arrow" src="images/arrow-yellow.png"></i><span>إقرأ المزيد</span><i><img alt="arrow" src="images/arrow-yellow.png"></i>
-              </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 margin40">
-                    <div class="agent_wrap">
-                        <div class="image">
-                            <img src="images/agent-six.jpg" alt="Agents">
-                            <div class="img-info">
-                                <h3>حسام و حنان</h3>
-                                <span>أعزب- أرملة</span>
-                                <p class="top20 bottom30">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر
-                                    إدخال بعض النوادر أو الكلمات العشوائية إلى النص.</p>
-                                <table class="agent_contact table">
-                                    <tbody>
-                                        <tr class="bottom10">
-                                            <td><strong>حسام:</strong></td>
-                                            <td class="text-right">السعودية</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>حنان:</strong></td>
-                                            <td class="text-right"><a href="#.">البحرين</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <hr>
-                                <a class="btn-more" href="blank.html">
-              <i><img alt="arrow" src="images/arrow-yellow.png"></i><span>إقرأ المزيد</span><i><img alt="arrow" src="images/arrow-yellow.png"></i>
-              </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>  --}}
-<!--Testinomials ends-->
 @endsection

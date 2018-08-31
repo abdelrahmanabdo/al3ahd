@@ -181,6 +181,9 @@
         <li><a href="{{route('allMembers')}}"><i class="fa fa-link"></i> <span>كل الأعضاء</span></a></li>
         <li><a href="{{route('specialMembers')}}"><i class="fa fa-link"></i> <span>الأعضاء المميزين</span></a></li>
         <li><a href="{{route('blockedMembers')}}"><i class="fa fa-link"></i> <span>الأعضاء المحظوريين</span></a></li>
+        <li><a href="{{route('subscription')}}"><i class="fa fa-link"></i> <span>طلبات الترقية  </span></a></li>
+        <li><a href="{{route('abuses')}}"><i class="fa fa-link"></i> <span>رسائل الاساءة </span></a></li>
+
         <li><a href="{{route('generalSettings')}}"><i class="fa fa-link"></i> <span>الاعدادات العامة </span></a></li>
 
       </ul>

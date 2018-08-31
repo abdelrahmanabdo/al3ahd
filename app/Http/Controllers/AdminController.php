@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Abuses;
+use App\askSubscription;
+
 use Image ;
 use Storage ;
 use App\GeneralSettings;
@@ -85,6 +88,17 @@ class AdminController extends Controller
         $user->isBlocked = 0 ;
         $user->save();
         return back()->with('alert','تم  الغاء الحظر ');
+    }
+
+    public function subscription_page () {
+        $subscribed =  askSubscription::all() ;
+
+        return view('admin.subscription_messages',['subscribed'=>$subscribed]);
+    }
+
+    public function abuses_messages_page(){
+        $abuses =  Abuses::with('user') ;
+        return view('admin.abuses_messages',['abuses'=>$abuses]);
     }
 
    
